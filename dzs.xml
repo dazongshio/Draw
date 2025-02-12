@@ -1,73 +1,73 @@
 <mxfile>
-  <diagram id="Lf9hxktVYh6QdXkXQcG0" name="Page-1"> <!--host="app.diagrams.net" modified="2024-06-04T04:07:55.688Z" version="24.5.2"-->
-    <mxGraphModel> <!-- dx="1603" dy="816" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169"-->
-      <root>
-        <!-- 核心结构 -->
-        <mxCell id="input" value="Input Volume&lt;br&gt;(B,1,D,H,W)" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-          <mxGeometry x="240" y="80" width="120" height="60"/>
-        </mxCell>
+    <diagram id="Lf9hxktVYh6QdXkXQcG0" name="Page-1"> <!--host="app.diagrams.net" modified="2024-06-04T04:07:55.688Z" version="24.5.2"-->
+        <mxGraphModel> <!-- dx="1603" dy="816" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169"-->
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <!-- 核心结构 -->
+                <mxCell id="input" value="Input Volume&lt;br&gt;(B,1,D,H,W)" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="80" width="120" height="60"/>
+                </mxCell>
 
-        <!-- TF Encoder 模块 -->
-        <mxCell id="tf_encoder" value="TF Encoder" style="swimlane;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="100" y="200" width="400" height="440">
-            <!-- 内部逐级展开 -->
-            <Array as="points"/>
-          </mxGeometry>
-        </mxCell>
+                <!-- TF Encoder 模块 -->
+                <mxCell id="tf_encoder" value="TF Encoder" style="swimlane;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="200" width="400" height="440">
+                        <!-- 内部逐级展开 -->
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
 
-        <!-- TF Stage 1-4 -->
-        <mxCell id="stage1" value="Stage1:&lt;br&gt;c1(B,48,D/4,H/4,W/4)" style="rounded=1;whiteSpace=wrap;fillColor=#f5f5f5;strokeColor=#666666;" parent="tf_encoder" vertex="1">
-          <mxGeometry x="80" y="60" width="240" height="40"/>
-        </mxCell>
-        <!-- 其他stage类似结构，纵向排列 -->
+                <!-- TF Stage 1-4 -->
+                <mxCell id="stage1" value="Stage1:&lt;br&gt;c1(B,48,D/4,H/4,W/4)" style="rounded=1;whiteSpace=wrap;fillColor=#f5f5f5;strokeColor=#666666;" parent="tf_encoder" vertex="1">
+                    <mxGeometry x="80" y="60" width="240" height="40"/>
+                </mxCell>
+                <!-- 其他stage类似结构，纵向排列 -->
 
-        <!-- ResEncoder模块 -->
-        <mxCell id="res_encoder" value="ResEncoder Block" style="shape=process;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="560" y="200" width="160" height="440">
-            <!-- 分层次展示 -->
-            <Array as="points">
-              <mxPoint x="0" y="0.25"/>
-              <mxPoint x="0" y="0.5"/>
-              <mxPoint x="0" y="0.75"/>
-            </Array>
-          </mxGeometry>
-        </mxCell>
+                <!-- ResEncoder模块 -->
+                <mxCell id="res_encoder" value="ResEncoder Block" style="shape=process;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="200" width="160" height="440">
+                        <!-- 分层次展示 -->
+                        <Array as="points">
+                            <mxPoint x="0" y="0.25"/>
+                            <mxPoint x="0" y="0.5"/>
+                            <mxPoint x="0" y="0.75"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
 
-        <!-- 中间监督模块 -->
-        <mxCell id="aux_supervision" value="中间监督模块" style="swimlane;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-          <mxGeometry x="780" y="200" width="200" height="180">
-            <!-- 三个监督分支 -->
-            <mxCell id="aux_head1" value="AuxHead1" style="rounded=1;whiteSpace=wrap;" parent="aux_supervision" vertex="1">
-              <mxGeometry y="20" width="180" height="40"/>
-            </mxCell>
-            <!-- AuxHead2,AuxHead3类似 -->
-          </mxGeometry>
-        </mxCell>
+                <!-- 中间监督模块 -->
+                <mxCell id="aux_supervision" value="中间监督模块" style="swimlane;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="780" y="200" width="200" height="180">
+                        <!-- 三个监督分支 -->
+                        <mxCell id="aux_head1" value="AuxHead1" style="rounded=1;whiteSpace=wrap;" parent="aux_supervision" vertex="1">
+                            <mxGeometry y="20" width="180" height="40"/>
+                        </mxCell>
+                        <!-- AuxHead2,AuxHead3类似 -->
+                    </mxGeometry>
+                </mxCell>
 
-        <!-- 边界检测模块 -->
-        <mxCell id="boundary_head" value="BoundaryHead" style="rounded=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-          <mxGeometry x="780" y="400" width="200" height="80"/>
-        </mxCell>
+                <!-- 边界检测模块 -->
+                <mxCell id="boundary_head" value="BoundaryHead" style="rounded=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="780" y="400" width="200" height="80"/>
+                </mxCell>
 
-        <!-- Decoder部分 -->
-        <mxCell id="decoder_block" value="Decoder Upsample" style="shape=loopLimit;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="560" y="680" width="420" height="360">
-            <!-- 逐级上采样展开 -->
-          </mxGeometry>
-        </mxCell>
+                <!-- Decoder部分 -->
+                <mxCell id="decoder_block" value="Decoder Upsample" style="shape=loopLimit;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="680" width="420" height="360">
+                        <!-- 逐级上采样展开 -->
+                    </mxGeometry>
+                </mxCell>
 
-        <!-- 连接关系 -->
-        <mxCell id="conn1" style="edgeStyle=orthogonalEdgeStyle;curved=1;" parent="1" source="input" target="tf_encoder" edge="1">
-          <mxGeometry relative="1"/>
-        </mxCell>
-        
-        <!-- 条件判断节点 -->
-        <mxCell id="is_training" value="if training?" style="rhombus;whiteSpace=wrap;fillColor=#ffffff;" parent="1" vertex="1">
-          <mxGeometry x="680" y="520" width="80" height="40"/>
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
+                <!-- 连接关系 -->
+                <mxCell id="conn1" style="edgeStyle=orthogonalEdgeStyle;curved=1;" parent="1" source="input" target="tf_encoder" edge="1">
+                    <mxGeometry relative="1"/>
+                </mxCell>
+
+                <!-- 条件判断节点 -->
+                <mxCell id="is_training" value="if training?" style="rhombus;whiteSpace=wrap;fillColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="520" width="80" height="40"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
-
-
