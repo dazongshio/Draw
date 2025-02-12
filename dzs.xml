@@ -5,7 +5,7 @@
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <!-- 核心结构 -->
-                <mxCell id="input" value="Input Volume&lt;br&gt;(B,1,D,H,W)" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                <mxCell id="input" value="Input Volume(B,1,D,H,W)" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
                     <mxGeometry x="240" y="80" width="120" height="60" as="geometry" />
                 </mxCell>
 
@@ -18,7 +18,7 @@
                 </mxCell>
 
                 <!-- TF Stage 1-4 -->
-                <mxCell id="stage1" value="Stage1:&lt;br&gt;c1(B,48,D/4,H/4,W/4)" style="rounded=1;whiteSpace=wrap;fillColor=#f5f5f5;strokeColor=#666666;" parent="tf_encoder" vertex="1">
+                <mxCell id="stage1" value="Stage1:c1(B,48,D/4,H/4,W/4)" style="rounded=1;whiteSpace=wrap;fillColor=#f5f5f5;strokeColor=#666666;" parent="tf_encoder" vertex="1">
                     <mxGeometry x="80" y="60" width="240" height="40" as="geometry" />
                 </mxCell>
                 <!-- 其他stage类似结构，纵向排列 -->
